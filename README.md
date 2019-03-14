@@ -47,3 +47,48 @@
         <em>Woman, Woman1 and Woman2</em>
     </p>
 </p>
+### 直方图均衡效果分析
+1. 对每一系列的原始图片而言，直方图均衡使其明暗更为协调，一定程度上降低了图片的局部高对比度；
+2. 对同一系列内不同明暗的图片而言，直方图均衡明显改善了图片过明或过暗的情况，使其输出效果更加接近原始图片，
+但由于变明或变暗过程丢弃了部分灰度级，所以无法完全恢复出原始图片的效果。  
+
+## 二、指定直方图匹配增强
+对每张图片，指定其所需匹配的直方图为：系列图片的原始图片基于MATLAB的'adapthisteq()'函数所得到的直方图。  
+直方图匹配增强的效果如下：  
+<p align="center">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2citywall.bmp" alt="Sample"  width="280" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2citywall1.bmp" alt="Sample"  width="280" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2citywall2.bmp" alt="Sample"  width="280" height="230">
+    <p align="center">
+        <em>Citywall, Citywall1 and Citywall2</em>
+    </p>
+</p>
+<p align="center">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2elain.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2elain1.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2elain2.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2elain3.bmp" alt="Sample"  width="300" height="230">
+    <p align="center">
+        <em>Elain, Elain1, Elain2 and Elain3</em>
+    </p>
+</p>
+<p align="center">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2lena.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2lena1.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2lena2.bmp" alt="Sample"  width="300" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2lena4.bmp" alt="Sample"  width="300" height="230">
+    <p align="center">
+        <em>Lena, Lena1, Lena2 and Lena4</em>
+    </p>
+</p>
+<p align="center">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2woman.BMP" alt="Sample"  width="280" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2woman1.bmp" alt="Sample"  width="280" height="230">
+    <img src="https://github.com/an1006634493/hw3/blob/master/img/hist2woman2.bmp" alt="Sample"  width="280" height="230">
+    <p align="center">
+        <em>Woman, Woman1 and Woman2</em>
+    </p>
+</p>
+### 直方图匹配效果分析
+由于使用的匹配直方图并非均衡直方图，而是由原始图片特性所得到的自适应直方图，在进行直方图匹配后，
+既实现了图像增强的效果，又保留了原始图像的灰度分布，使增强图像明暗适当。
