@@ -96,4 +96,17 @@
 由于使用的匹配直方图并非均衡直方图，而是由原始图片特性所得到的自适应直方图，在进行直方图匹配后，
 既实现了图像增强的效果，又保留了原始图像的灰度分布，使增强图像明暗适当。
 
+## 三、局部直方图增强
+对Elain和Lena图像进行7x7的局部直方图增强，相关参数设定如下：
 
+```
+E = 2;      
+k0=0.6;
+k1=0.02;
+k2=0.4;
+```
+
+局部直方图增强效果如下：
+![Image1](https://github.com/an1006634493/hw3/blob/master/img/stg_elain.bmp)
+em
+![Image1](https://github.com/an1006634493/hw3/blob/master/img/stg_lena.bmp)
