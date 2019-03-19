@@ -1,0 +1,397 @@
+[I001,map]= imread('citywall.bmp');
+I0001 = ind2gray(I001,map);
+subplot(4,4,1); 
+imhist(I0001); 
+title('citywall');
+[I01,map]= imread('citywall1.bmp');
+I1 = ind2gray(I01,map);
+subplot(4,4,2); 
+imhist(I1); 
+title('citywall1');
+[I02,map] = imread('citywall2.bmp'); 
+I2 = ind2gray(I02,map);
+subplot(4,4,3); 
+imhist(I2); 
+title('citywall2');
+[I002,map]= imread('elain.bmp');
+I0002 = ind2gray(I002,map);
+subplot(4,4,5); 
+imhist(I0002); 
+title('elain');
+[I03,map] = imread('elain1.bmp'); 
+I3 = ind2gray(I03,map);
+subplot(4,4,6); 
+imhist(I3); 
+title('elain1');
+[I04,map] = imread('elain2.bmp'); 
+I4= ind2gray(I04,map);
+subplot(4,4,7); 
+imhist(I4); 
+title('elain2');
+[I05,map] = imread('elain3.bmp'); 
+I5 = ind2gray(I05,map);
+subplot(4,4,8); 
+imhist(I5); 
+title('elain3');
+[I003,map]= imread('lena.bmp');
+I0003 = ind2gray(I003,map);
+subplot(4,4,9); 
+imhist(I0003); 
+title('lena');
+[I06,map] = imread('lena1.bmp'); 
+I6 = ind2gray(I06,map);
+subplot(4,4,10); 
+imhist(I6); 
+title('lena1');
+[I07,map] = imread('lena2.bmp');
+I7 = ind2gray(I07,map);
+subplot(4,4,11); 
+imhist(I7); 
+title('lena2');
+[I08,map] = imread('lena4.bmp'); 
+I8 = ind2gray(I08,map);
+subplot(4,4,12); 
+imhist(I8); 
+title('lena4');
+[I004,map]= imread('woman.bmp');
+I0004 = ind2gray(I004,map);
+subplot(4,4,13); 
+imhist(I0004); 
+title('woman');
+[I09,map] = imread('woman1.bmp'); 
+I9 = ind2gray(I09,map);
+subplot(4,4,14); 
+imhist(I9); 
+title('woman1');
+[I010,map] = imread('woman2.bmp'); 
+I10 = ind2gray(I010,map);
+subplot(4,4,15); 
+imhist(I10); 
+title('woman2');
+I1 = imread('citywall1.bmp'); 
+J1=histeq(I1);
+figure;
+subplot(1,2,2); 
+imshow(J1); 
+title('citywall1');
+subplot(1,2,1); 
+imshow(I1); 
+title('原图');
+
+I2 = imread('citywall2.bmp'); 
+J2=histeq(I2);
+figure;
+subplot(1,2,2); 
+imshow(J2); 
+title('citywall2');
+subplot(1,2,1); 
+imshow(I2); 
+title('原图');
+
+I3 = imread('elain1.bmp'); 
+J3=histeq(I3);
+figure;
+subplot(1,2,2); 
+imshow(J3); 
+title('elain1');
+subplot(1,2,1); 
+imshow(I3); 
+title('原图');
+
+I4 = imread('elain2.bmp'); 
+J4=histeq(I4);
+figure;
+subplot(1,2,2);  
+imshow(J4); 
+title('elain2');
+subplot(1,2,1); 
+imshow(I4); 
+title('原图');
+
+I5 = imread('elain3.bmp'); 
+J5=histeq(I5);
+figure;
+subplot(1,2,2); 
+imshow(J5); 
+title('elain3');
+subplot(1,2,1); 
+imshow(I5); 
+title('原图');
+
+I6 = imread('lena1.bmp'); 
+J6=histeq(I6);
+figure;
+subplot(1,2,2); 
+imshow(J6); 
+title('lena1');
+subplot(1,2,1); 
+imshow(I6); 
+title('原图');
+
+I7 = imread('lena2.bmp');
+J7=histeq(I7);
+figure;
+subplot(1,2,2); 
+imshow(J7); 
+title('lena2');
+subplot(1,2,1); 
+imshow(I7); 
+title('原图');
+
+I8 = imread('lena4.bmp'); 
+J8=histeq(I8);
+figure;
+subplot(1,2,2); 
+imshow(J8); 
+title('lena4');
+subplot(1,2,1); 
+imshow(I8); 
+title('原图');
+
+I9 = imread('woman1.bmp'); 
+J9=histeq(I9);
+figure;
+subplot(1,2,2); 
+imshow(J9); 
+title('woman1');
+subplot(1,2,1); 
+imshow(I9); 
+title('原图');
+
+I10 = imread('woman2.bmp'); 
+J10=histeq(I10);
+figure;
+subplot(1,2,2);  
+imshow(J10); 
+title('woman2');
+subplot(1,2,1); 
+imshow(I10); 
+title('原图');
+
+
+[I001,map]= imread('citywall.bmp');
+I0001 = ind2gray(I001,map);
+figure;
+subplot(2,2,2); 
+imhist(I1); 
+title('citywall');
+subplot(2,2,1);
+imshow(I1);
+title("原图");
+hist1 = imhist(I0001);
+[I01,map]= imread('citywall1.bmp');
+I1 = ind2gray(I01,map);
+J1=histeq(I1, hist1); 
+subplot(2,2,3); 
+imshow(J1); 
+title('citywall1');
+subplot(2,2,4); 
+imhist(J1); 
+title('citywall1');
+
+[I02,map] = imread('citywall2.bmp'); 
+I2 = ind2gray(I02,map);
+figure;
+subplot(2,2,2); 
+imhist(I2); 
+title('citywall');
+subplot(2,2,1);
+imshow(I2);
+title("原图");
+J2=histeq(I2, hist1); 
+subplot(2,2,3); 
+imshow(J2); 
+title('citywall2');
+subplot(2,2,4); 
+imhist(J2); 
+title('citywall2');
+ 
+[I002,map]= imread('elain.bmp');
+I0002 = ind2gray(I002,map);
+figure;
+subplot(2,2,2); 
+imhist(I3); 
+title('elain');
+subplot(2,2,1);
+imshow(I3);
+title("原图");
+hist2 = imhist(I0002);
+[I03,map] = imread('elain1.bmp'); 
+I3 = ind2gray(I03,map);
+J3=histeq(I3, hist2); 
+subplot(2,2,3); 
+imshow(J3); 
+title('elain1');
+subplot(2,2,4); 
+imhist(J3); 
+title('elain1');
+
+[I04,map] = imread('elain2.bmp'); 
+I4= ind2gray(I04,map);
+figure;
+subplot(2,2,2); 
+imhist(I4); 
+title('elain');
+subplot(2,2,1);
+imshow(I4);
+title("原图");
+J4=histeq(I4, hist2); 
+subplot(2,2,3); 
+imshow(J4); 
+title('elain2');
+subplot(2,2,4); 
+imhist(J4); 
+title('elain2');
+
+[I05,map] = imread('elain3.bmp'); 
+I5 = ind2gray(I05,map);
+J5=histeq(I5, hist2); 
+figure;
+subplot(2,2,2); 
+imhist(I5); 
+title('elain');
+subplot(2,2,1);
+imshow(I5);
+title("原图");
+subplot(2,2,3); 
+imshow(J5); 
+title('elain3');
+subplot(2,2,4); 
+imhist(J5); 
+title('elain3');
+ 
+[I003,map]= imread('lena.bmp');
+I0003 = ind2gray(I003,map);
+figure;
+subplot(2,2,2); 
+imhist(I6); 
+title('lena');
+subplot(2,2,1);
+imshow(I6);
+title("原图");
+hist3 = imhist(I0003);
+[I06,map] = imread('lena1.bmp'); 
+I6 = ind2gray(I06,map);
+J6=histeq(I6, hist3); 
+subplot(2,2,3); 
+imshow(J6); 
+title('lena1');
+subplot(2,2,4); 
+imhist(J6); 
+title('lena1');
+[I07,map] = imread('lena2.bmp');
+I7 = ind2gray(I07,map);
+J7=histeq(I7, hist3); 
+figure;
+subplot(2,2,2); 
+imhist(I7); 
+title('lena');
+subplot(2,2,1);
+imshow(I7);
+title("原图");
+subplot(2,2,3); 
+imshow(J7); 
+title('lena2');
+subplot(2,2,4); 
+imhist(J7); 
+title('lena2');
+
+
+[I08,map] = imread('lena4.bmp'); 
+I8 = ind2gray(I08,map);J8=histeq(I8, hist3);
+figure;
+subplot(2,2,2); 
+imhist(I8); 
+title('lena');
+subplot(2,2,1);
+imshow(I8);
+title("原图");
+subplot(2,2,3); 
+imshow(J8); 
+title('lena4');
+subplot(2,2,4); 
+imhist(J8); 
+title('lena4');
+ 
+ 
+[I004,map]= imread('woman.bmp');
+I0004 = ind2gray(I004,map);
+figure;
+subplot(2,2,2); 
+imhist(I9); 
+title('woman');
+subplot(2,2,1);
+imshow(I9);
+title("原图");
+hist4 = imhist(I0004);
+[I09,map] = imread('woman1.bmp'); 
+I9 = ind2gray(I09,map);J9=histeq(I9, hist4); 
+subplot(2,2,3); 
+imshow(J9); 
+title('woman1');
+subplot(2,2,4); 
+imhist(J9); 
+title('woman1');
+
+[I010,map] = imread('woman2.bmp'); 
+I10 = ind2gray(I010,map);J10=histeq(I10, hist4); 
+figure;
+subplot(2,2,2); 
+imhist(I10); 
+title('woman');
+subplot(2,2,1);
+imshow(I10);
+title("原图");
+subplot(2,2,3); 
+imshow(J10); 
+title('woman2');
+subplot(2,2,4); 
+imhist(J10); 
+title('woman2');
+
+
+I = imread('lena.bmp'); 
+n=7;
+model(1:n,1:n)=1;%a为n*n大小的模板，像素值为1
+%对原图进行扩展，因为模板中心从图像的第一个像素开始，模板必然有点在图像外，无对应点，所以进行扩展，是的图像一一对应
+imgTend=wextend('2D','sym',I,n);
+tendTrans=double(imgTend);%变成double型便于后期的点乘计算
+[row,col]=size(imgTend);%获取扩展后的图像的大小
+tendTransTmp=tendTrans;
+%model(a:b,c:d)表示A矩阵的第a到b行，第c到d列的所有元素
+for i=n+1:row-n
+    for j=n+1:col-n %因为进行了扩展，所以原图像的第一个像素在扩展后的图像中对应的是（n+1，n+1）这个点
+        modelResult=tendTrans(i:i+(n-1),j:j+(n-1)).*model(1:n,1:n);%在图像中取n*n大小，与模板对应点乘，生成点乘后的n*n大小的矩阵m
+        modelEpual=histeq(uint8(modelResult));%对局部m进行直方图均衡化
+        %k=histeq(m);%对块图进行直方图均衡，m为double型，所以其k就是全1，那么x2中对应的位置也就是全1，最后显示转化成uint8显示肯定为黑色。
+        equalTmp=double(modelEpual);%k仍为n*n大小的矩阵
+        tendTransTmp(i,j)=equalTmp(4,4);%将均衡后的中心点的像素值赋给原图对应点的元素
+    end
+end
+%未被赋值的元素取原值
+result=tendTransTmp(n+1:row-n,n+1:col-n);%均衡化后取原图像大小
+result=uint8(result);
+%d=uint8(x2);
+figure,imshow(result);
+title('均衡后的图像');
+
+
+
+
+I=imread('elain.bmp');
+grid on; %显示网格线
+axis on;                  %显示坐标系
+[m,n]=size(I);                            %测量图像尺寸参数
+GP=zeros(1,256);                           %预创建存放灰度出现概率的向量
+for k=0:255
+    GP(k+1)=length(find(I==k))/(m*n);    %计算每级灰度出现的概率，将其存入GP中相应位置
+end
+subplot(1,2,1),bar(0:255,GP,'b')                   %绘制直方图
+title('灰度直方图')
+xlabel('灰度值')
+ylabel(' 出现概率')
+I2=im2bw(I,130/255);
+subplot(1,2,2),imshow(I2);
+title('阈值130的分割图像')
+grid on;                  %显示网格线
+axis on;                  %显示坐标系
